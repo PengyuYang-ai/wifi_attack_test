@@ -79,8 +79,8 @@
 
 - 将 USB 无线网卡连接至虚拟机	
 
-  - ![image-20251215193009485](C:\Users\ypy\AppData\Roaming\Typora\typora-user-images\image-20251215193024316.png)
-  - ![image-20251215193037896](C:\Users\ypy\AppData\Roaming\Typora\typora-user-images\image-20251215193037896.png)
+  - ![image-20251215193009485](D:\桌面\wifi_attack_test\picture\image-20251215193024316.png)
+  - ![image-20251215193037896](D:\桌面\wifi_attack_test\picture\image-20251215193037896.png)
 
   
 
@@ -90,7 +90,7 @@
   ifconfig
   ```
 
-  ![image-20251215193201349](C:\Users\ypy\AppData\Roaming\Typora\typora-user-images\image-20251215193201349.png)
+  ![image-20251215193201349](D:\桌面\wifi_attack_test\picture\image-20251215193201349.png)
 
 ### 5.2 开启监听模式
 
@@ -100,7 +100,7 @@
 sudo su
 ```
 
-![image-20251215193231420](C:\Users\ypy\AppData\Roaming\Typora\typora-user-images\image-20251215193231420.png)
+![image-20251215193231420](D:\桌面\wifi_attack_test\picture\image-20251215193231420.png)
 
 - **2.开启监听**
 
@@ -112,7 +112,7 @@ sudo su
 
 - 接口切换后显示为 `wlan0mon`
 
-- ![image-20251215193309413](C:\Users\ypy\AppData\Roaming\Typora\typora-user-images\image-20251215193309413.png)
+- ![image-20251215193309413](D:\桌面\wifi_attack_test\picture\image-20251215193309413.png)
 
 ### 5.3 无线网络扫描
 
@@ -122,7 +122,7 @@ sudo su
   airodump-ng wlan0mon
   ```
 
-  ![QQ20251215-173356](D:\桌面\QQ20251215-173356.png)
+  ![QQ20251215-173356](D:\桌面\wifi_attack_test\picture\QQ20251215-173356.png)
 
 - 重点关注参数：
 
@@ -148,7 +148,7 @@ airodump-ng wlan0mon -c[CH] --bssid [MAC] -w ~/wlan0mon
 （现代WiFi环境中，无差别广播Deauth攻击已基本失效。有效攻击必须精准定位客户端MAC，这既是技术限制，也是安全演进的结果。实验时请关注802.11ax(WiFi 6)中的TWT机制对Deauth攻击的新影响，这是当前前沿研究方向。）
 
 
-![image-20251215193604502](C:\Users\ypy\AppData\Roaming\Typora\typora-user-images\image-20251215193604502.png)
+![image-20251215193604502](D:\桌面\wifi_attack_test\picture\image-20251215193604502.png)
 
 ### 5.**Deauth攻击断掉客户端连接**
 
@@ -164,7 +164,7 @@ airodump-ng wlan0mon -c[CH] --bssid [MAC] -w ~/wlan0mon
 
 - 观察客户端网络连接状态变化
 
-- ![image-20251215193639889](C:\Users\ypy\AppData\Roaming\Typora\typora-user-images\image-20251215193639889.png)
+- ![image-20251215193639889](D:\桌面\wifi_attack_test\picture\image-20251215193639889.png)
 
 ------
 
